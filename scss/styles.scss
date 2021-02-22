@@ -27,8 +27,8 @@
 .lds-ring {
     display: inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
 }
 
 .lds-ring div {
@@ -64,4 +64,17 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+// results
+
+.close {
+    float: right;
+    color: $dark0;
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: $light0;
+    border-radius: 8px;
+    text-align: right;
+    font-weight: bold;
 }

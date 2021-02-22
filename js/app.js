@@ -5,10 +5,10 @@ $(document).ready(function () {
 });
 
 $(document).on('click', '#checkoutBtn', function (e) {
+
     var password = $('#password').val();
 
     setLoading();
-
     e.preventDefault();
 
     $.ajax({
@@ -46,6 +46,14 @@ $(document).on('click', '#checkoutBtn', function (e) {
         }
     });
 });
+
+$(document).on('click', '.close', function (e) {
+    colorAlertBox();
+});
+
+function colorAlertBox() {
+    $('#result').hide();
+}
 
 function setAlert(focus, bgColor, fontColor, title, text, altText) {
 

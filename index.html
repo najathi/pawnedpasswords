@@ -22,18 +22,23 @@
                 <div class="alert" role="alert">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Password</label>
-                    <input type="password" type="submit" class="form-control" id="password" placeholder="check your password" required>
-                </div>
+                <form>
 
-                <div class="button-container">
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" type="submit" class="form-control" id="password" placeholder="check your password" required="required">
+                        <div id="error"></div>
+                    </div>
 
-                    <button type="button" id="checkoutBtn" class="btn btn-primary">check out</button>
+                    <div class="button-container">
 
-                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                        <button type="submit" id="checkoutBtn" class="btn btn-primary">check out</button>
 
-                </div>
+                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+                    </div>
+
+                </form>
 
             </div>
 
@@ -42,6 +47,7 @@
             <div class="col-lg-6 col-sm-12 col-12" id="result">
                 <div class="card">
                     <div class="card-body">
+                    <span class="close">X</span>
                     <h5 class="card-title"></h5>
                     <p class="card-text"></p>
                     <p class="card-text-desc"></p>
