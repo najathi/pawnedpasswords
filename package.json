@@ -1,0 +1,28 @@
+{
+  "name": "pawnedpassword",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najathi/pawnedpasswords.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/najathi/pawnedpasswords/issues"
+  },
+  "homepage": "https://github.com/najathi/pawnedpasswords#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

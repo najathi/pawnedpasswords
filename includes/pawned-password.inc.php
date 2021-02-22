@@ -13,6 +13,6 @@ function checkPawnedPasswords(string $password) : int
     return $count ?? 0;
 }
 
-echo "<br/><br/>";
-
-echo checkPawnedPasswords("abcd1234");
+if (!empty($_POST)) {
+    echo checkPawnedPasswords($_POST["password"]);
+}
