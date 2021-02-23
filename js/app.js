@@ -8,6 +8,14 @@ $(document).on('click', '#checkoutBtn', function (e) {
 
     var password = $('#password').val();
 
+    if (password == "") {
+        return alert('Password field must be required!');
+    }
+
+    if (password.length <= 2) {
+        return alert('Password field length is very short!');
+    }
+
     setLoading();
     e.preventDefault();
 
@@ -28,11 +36,11 @@ $(document).on('click', '#checkoutBtn', function (e) {
 
             if (data == 0) {
 
-                setAlert('#result', 'bg-success', 'text-white', 'Good news — no pwnage found!', "This password wasn't found in any of the Pwned Passwords loaded into Have I Been Pwned. That doesn't necessarily mean it's a good password, merely that it's not indexed on this site. If you're not already using a password manager, go and download 1Password and change all your passwords to be strong and unique.", "");
+                setAlert('#result', 'green', 'text-white', 'Good news — no pwnage found!', "This password wasn't found in any of the Pwned Passwords loaded into Have I Been Pwned. That doesn't necessarily mean it's a good password, merely that it's not indexed on this site. If you're not already using a password manager, go and download 1Password and change all your passwords to be strong and unique.", "");
 
             } else {
 
-                setAlert('#result', 'bg-danger', 'text-white', 'Oh no — pwned!', 'This password has been seen ' + data + ' times before', "This password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it!");
+                setAlert('#result', '#dc3545', 'text-white', 'Oh no — pwned!', 'This password has been seen ' + data + ' times before', "This password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it!");
 
             }
 
@@ -58,7 +66,7 @@ function colorAlertBox() {
 function setAlert(focus, bgColor, fontColor, title, text, altText) {
 
     $(focus).show();
-    $('.card').addClass(bgColor);
+    $('.card').css("background-color", bgColor);
     $('.card-title').addClass(fontColor);
     $('.card-title').html(title);
     $('.card-text').addClass(fontColor);
