@@ -7,6 +7,9 @@
 .p-b-16 {
   padding-bottom: 16px; }
 
+.p-16 {
+  padding: 16px; }
+
 .button-container {
   display: flex;
   justify-content: space-between;
